@@ -7,6 +7,9 @@ public class PetClick : MonoBehaviour
     
     string clickMessage = "Click!";
     float hitBoxSize = 1f;
+
+
+    
     // Start is called before the first frame update
     void Start()
     {
