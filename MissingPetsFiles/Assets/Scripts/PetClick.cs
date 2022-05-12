@@ -17,9 +17,14 @@ public class PetClick : MonoBehaviour
     {
          if (Input.GetMouseButtonDown(0)) 
         {
+            //makes a vector with the coordinates of the mouse position
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            //a completely useless line of code, not even sure why its here
+            //makes a copy of mousePos but without the z axis
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
             
+            //check collision with the mouse
             if(mousePos.x > transform.position.x - hitBoxSize &&
                 mousePos.x < transform.position.x + hitBoxSize &&
                 mousePos.y > transform.position.y - hitBoxSize &&
