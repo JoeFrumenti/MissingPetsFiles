@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PetClick : MonoBehaviour
 {
-    public AudioSource noise;
-    string clickMessage = "Click!";
+    private AudioSource noise;
+    //string clickMessage = "Click!";
     float hitBoxSize = 1f;
     
 
@@ -29,18 +29,20 @@ public class PetClick : MonoBehaviour
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
             
             //check collision with the mouse
-            if(mousePos.x > transform.position.x - hitBoxSize &&
-                mousePos.x < transform.position.x + hitBoxSize &&
-                mousePos.y > transform.position.y - hitBoxSize &&
-                mousePos.y < transform.position.y + hitBoxSize)
-                if(this.gameObject.tag == ("BadPet"))
+            if(mousePos.x > this.transform.position.x - hitBoxSize &&
+                mousePos.x < this.transform.position.x + hitBoxSize &&
+                mousePos.y > this.transform.position.y - hitBoxSize &&
+                mousePos.y < this.transform.position.y + hitBoxSize)
                 {
-                    noise.Play();
-                    Destroy(this.gameObject);
-                }
-                if(this.gameObject.tag == ("GoodPet"))
-                {
-                    noise.Play();
+                    if(this.gameObject.tag == ("BadPet"))
+                    {
+                        noise.Play();
+                        Destroy(this.gameObject);
+                    }
+                    if(this.gameObject.tag == ("GoodPet"))
+                    {
+                        noise.Play();
+                    }
                 }
        
         }

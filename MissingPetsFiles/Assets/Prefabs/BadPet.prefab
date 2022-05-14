@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376a2cc741fe5814bb373974baf54f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noise: {fileID: 0}
+  noise: {fileID: 5109707338473241010}
 --- !u!82 &5109707338473241010
 AudioSource:
   m_ObjectHideFlags: 0
