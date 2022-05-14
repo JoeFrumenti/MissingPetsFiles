@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class PetClick : MonoBehaviour
 {
-    private AudioSource noise;
+    internal AudioSource noise;
     //string clickMessage = "Click!";
     float hitBoxSize = 1f;
     
 
-    
+    void Awake()
+    {
+        noise = this.GetComponent<AudioSource>();
+    }
     // Start is called before the first frame update
     void Start()
     {
-        noise = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
