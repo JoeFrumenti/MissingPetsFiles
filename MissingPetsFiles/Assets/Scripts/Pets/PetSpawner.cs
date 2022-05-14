@@ -13,7 +13,7 @@ public class PetSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int goodSpawn = Random.Range(0, 38);
+        int goodSpawn = Random.Range(0, 31);
         for (int i = -7; i <=7; i+=2)
             for(int j = -3; j <= 3; j+=2)
             {
