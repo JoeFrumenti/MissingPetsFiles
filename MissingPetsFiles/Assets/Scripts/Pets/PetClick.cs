@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PetClick : MonoBehaviour
 {
-    
+    public AudioSource noise;
     string clickMessage = "Click!";
     float hitBoxSize = 1f;
-
+    
 
     
     // Start is called before the first frame update
     void Start()
     {
+        noise = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,7 +34,15 @@ public class PetClick : MonoBehaviour
                 mousePos.y > transform.position.y - hitBoxSize &&
                 mousePos.y < transform.position.y + hitBoxSize)
                 if(this.gameObject.tag == ("BadPet"))
+                {
+                    noise.Play();
                     Destroy(this.gameObject);
+                }
+                if(this.gameObject.tag == ("GoodPet"))
+                {
+                    noise.Play();
+                }
+       
         }
     }
 }
