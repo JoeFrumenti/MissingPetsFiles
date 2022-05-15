@@ -7,6 +7,10 @@ public class PetClick : MonoBehaviour
     internal AudioSource noise;
     //string clickMessage = "Click!";
     float hitBoxSize = 1f;
+
+    bool isDying = false;
+    float deathNoiseTime = 0.1f;
+    float deathTimer = 0f;
     
 
     void Awake()
@@ -22,6 +26,14 @@ public class PetClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isDying)
+        {
+            deathTimer += Time.deltaTime;
+        }
+
+        if(deathTimer >= deathNoiseTime)
+            Destroy(this.gameObject);
+
          if (Input.GetMouseButtonDown(0)) 
         {
             //makes a vector with the coordinates of the mouse position
@@ -40,7 +52,7 @@ public class PetClick : MonoBehaviour
                     if(this.gameObject.tag == ("BadPet"))
                     {
                         noise.Play();
-                        Destroy(this.gameObject);
+                        isDying = true;
                     }
                     if(this.gameObject.tag == ("GoodPet"))
                     {
