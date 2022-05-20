@@ -11,6 +11,8 @@ TagManager:
   - Sloth
   - Hedgehog
   - Dino
+  - Wall
+  - SideWall
   layers:
   - Default
   - TransparentFX
