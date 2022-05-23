@@ -482,6 +482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PetSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4133739406203169277, guid: cd768d6b13d5e4d45ad47948ffb31204, type: 3}
+      propertyPath: m_TagString
+      value: PetSpawner
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd768d6b13d5e4d45ad47948ffb31204, type: 3}
 --- !u!1 &1097799228

@@ -13,6 +13,7 @@ public class PetClick : MonoBehaviour
     bool isDying = false;
     float deathNoiseTime = 0.1f;
     float deathTimer = 0f;
+
     
 
     void Awake()

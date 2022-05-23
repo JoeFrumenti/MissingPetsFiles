@@ -7,17 +7,27 @@ public class PetSpawner : MonoBehaviour
 {
     public GameObject BadPetPrefab;
     public GameObject GoodPetPrefab;
+    
+    public GameObject[] respawns;
 
     public GameObject[] Pets = new GameObject[5];
 
     int count = 0;
 
+    bool isRestarting = false;
+    float resetTimer;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        isRestarting = false;
+        print("Start called!");
         int correctPet = Random.Range(0,5);
         int petSpawn;
+
+        
+
 
         int goodSpawn = Random.Range(0, 31);
         for (int i = -7; i <=7; i+=2)
@@ -57,6 +67,30 @@ public class PetSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isRestarting)
+        {
+            resetTimer+= Time.deltaTime;
+        }
+        else
+
+        if(resetTimer >=2)
+        {
+            isRestarting = false;
+            resetTimer = 0;
+            Destroy(GameObject.FindGameObjectWithTag("GoodPet"));
+            Start();
+        }
+    }
+
+    internal void respawn()
+    {
+        print("respawning!");
         
+        respawns = GameObject.FindGameObjectsWithTag("BadPet");
+        for(int i = 0; i < respawns.Length; i++)
+        {
+            Destroy(respawns[i]);
+        }
+        isRestarting = true;
     }
 }

@@ -14,6 +14,7 @@ public class GoodPetClick : MonoBehaviour
     float deathNoiseTime = 0.1f;
     float deathTimer = 0f;
     
+    public GameObject petSpawner;
 
     void Awake()
     {
@@ -23,6 +24,7 @@ public class GoodPetClick : MonoBehaviour
     void Start()
     {
         collider2D = GetComponent<PolygonCollider2D>();
+        petSpawner = GameObject.FindGameObjectWithTag("PetSpawner");
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class GoodPetClick : MonoBehaviour
                 if(this.gameObject.tag == ("GoodPet"))
                 {
                     noise.Play();
+                    petSpawner.GetComponent<PetSpawner>().respawn();
                 }
             }
 
