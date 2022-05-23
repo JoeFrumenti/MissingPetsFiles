@@ -32,7 +32,11 @@ public class PetSpawner : MonoBehaviour
                 if(petSpawn >= correctPet)
                     petSpawn ++;
                 if(petSpawn > 4)
+                {
                     petSpawn = 0;
+                    if(correctPet == 0)
+                        petSpawn++;
+                }
 
                 if (count == goodSpawn)
                 {
