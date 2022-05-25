@@ -17,18 +17,21 @@ public class PetSpawner : MonoBehaviour
     bool isRestarting = false;
     float resetTimer;
 
+    internal int correctPet;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        correctPet = Random.Range(0,5);
+        GameObject.FindGameObjectWithTag("Poster").GetComponent<ChangeSprite>().UpdatePoster();
         count = 0;
         isRestarting = false;
         print("Start called!");
-        int correctPet = Random.Range(0,5);
         int petSpawn;
 
-        int goodSpawn = Random.Range(0, 31);
-        for (int i = -7; i <=7; i+=2)
+        int goodSpawn = Random.Range(0, 24);
+        for (int i = -7; i <=3; i+=2)
             for(int j = -3; j <= 3; j+=2)
             {
 
