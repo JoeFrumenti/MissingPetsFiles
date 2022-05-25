@@ -54,6 +54,9 @@ public class GoodPetClick : MonoBehaviour
                 {
                     noise.Play();
                     petSpawner.GetComponent<PetSpawner>().respawn();
+                    GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().setTimeRunning(false);
+                    GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().addTime(5);
+                
                 }
             }
 

@@ -29,6 +29,8 @@ public class PetSpawner : MonoBehaviour
         isRestarting = false;
         print("Start called!");
         int petSpawn;
+        GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().setTimeRunning(true);
+                
 
         int goodSpawn = Random.Range(0, 24);
         for (int i = -7; i <=3; i+=2)
