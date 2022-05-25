@@ -6,9 +6,9 @@ public class GoodPetClick : MonoBehaviour
 {
     internal AudioSource noise;
     //string clickMessage = "Click!";
-    float hitBoxSize = 1f;
+    //float hitBoxSize = 1f;
 
-    PolygonCollider2D collider2D;
+    new PolygonCollider2D collider2D;
 
     bool isDying = false;
     float deathNoiseTime = 0.1f;

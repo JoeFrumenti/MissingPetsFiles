@@ -21,13 +21,11 @@ public class PetSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        count = 0;
         isRestarting = false;
         print("Start called!");
         int correctPet = Random.Range(0,5);
         int petSpawn;
-
-        
-
 
         int goodSpawn = Random.Range(0, 31);
         for (int i = -7; i <=7; i+=2)
@@ -71,7 +69,6 @@ public class PetSpawner : MonoBehaviour
         {
             resetTimer+= Time.deltaTime;
         }
-        else
 
         if(resetTimer >=2)
         {
