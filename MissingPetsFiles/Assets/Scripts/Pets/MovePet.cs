@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MovePet : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class MovePet : MonoBehaviour
 
     void Awake()
     {
-        moveX = speeds[Random.Range(0,2)];
-        moveY = speeds[Random.Range(0,2)];   
+        moveX = speeds[UnityEngine.Random.Range(0,2)];
+        moveY = speeds[UnityEngine.Random.Range(0,2)];   
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(moveX,moveY);
     }
@@ -29,7 +30,7 @@ public class MovePet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.localScale = new Vector2(rb.velocity.x * Math.Abs(transform.localScale.x), transform.localScale.y);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

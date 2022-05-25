@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a94d14d0eda60344f8d68ece780fe3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petSpawner: {fileID: 4133739406203169267, guid: cd768d6b13d5e4d45ad47948ffb31204, type: 3}
+  petSpawner: {fileID: 0}
 --- !u!82 &-2224129119730298386
 AudioSource:
   m_ObjectHideFlags: 0
