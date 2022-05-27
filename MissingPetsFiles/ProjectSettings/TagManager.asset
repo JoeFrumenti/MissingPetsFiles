@@ -6,6 +6,15 @@ TagManager:
   tags:
   - GoodPet
   - BadPet
+  - Cat
+  - Chihuaha
+  - Sloth
+  - Hedgehog
+  - Dino
+  - Wall
+  - SideWall
+  - PetSpawner
+  - Poster
   layers:
   - Default
   - TransparentFX
