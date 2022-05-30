@@ -32,8 +32,8 @@ public class PetSpawner : MonoBehaviour
         GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().setTimeRunning(true);
                 
 
-        int goodSpawn = Random.Range(0, 24);
-        for (int i = -7; i <=3; i+=2)
+        int goodSpawn = Random.Range(0, 16);
+        for (int i = -5; i <=1; i+=2)
             for(int j = -3; j <= 3; j+=2)
             {
 
