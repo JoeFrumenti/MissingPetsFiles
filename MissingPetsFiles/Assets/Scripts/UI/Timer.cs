@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
 
     int timeLeft = 30;
+    int timerCap = 50;
     bool timeRunning = true;
     float time;
 
@@ -34,6 +35,8 @@ public class Timer : MonoBehaviour
     internal void addTime(int t)
     {
         timeLeft += t;
+        if(timeLeft > timerCap)
+            timeLeft = timerCap;
     }
 
     internal void setTimeRunning(bool b)

@@ -13,12 +13,14 @@ public class GoodPetClick : MonoBehaviour
     bool isDying = false;
     float deathNoiseTime = 0.1f;
     float deathTimer = 0f;
+    bool  clicked = false;
     
     public GameObject petSpawner;
 
     void Awake()
     {
         noise = this.GetComponent<AudioSource>();
+        clicked = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -50,8 +52,9 @@ public class GoodPetClick : MonoBehaviour
                     noise.Play();
                     isDying = true;
                 }
-                if(this.gameObject.tag == ("GoodPet"))
+                if(this.gameObject.tag == ("GoodPet") && !clicked)
                 {
+                    clicked = true;
                     noise.Play();
                     petSpawner.GetComponent<PetSpawner>().respawn();
                     GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().setTimeRunning(false);

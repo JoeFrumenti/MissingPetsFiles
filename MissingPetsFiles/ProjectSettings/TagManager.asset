@@ -15,6 +15,7 @@ TagManager:
   - SideWall
   - PetSpawner
   - Poster
+  - Timer
   layers:
   - Default
   - TransparentFX
