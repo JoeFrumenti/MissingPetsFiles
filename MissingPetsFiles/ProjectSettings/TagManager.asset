@@ -16,6 +16,7 @@ TagManager:
   - PetSpawner
   - Poster
   - Timer
+  - Music
   layers:
   - Default
   - TransparentFX

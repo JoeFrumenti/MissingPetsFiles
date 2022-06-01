@@ -51,6 +51,7 @@ public class GoodPetClick : MonoBehaviour
                 {
                     noise.Play();
                     isDying = true;
+                    GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().addTime(-2);
                 }
                 if(this.gameObject.tag == ("GoodPet") && !clicked)
                 {
@@ -58,7 +59,7 @@ public class GoodPetClick : MonoBehaviour
                     noise.Play();
                     petSpawner.GetComponent<PetSpawner>().respawn();
                     GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().setTimeRunning(false);
-                    GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().addTime(5);
+                    GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().addTime(2);
                 
                 }
             }
