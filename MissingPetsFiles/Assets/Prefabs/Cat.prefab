@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a94d14d0eda60344f8d68ece780fe3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petSpawner: {fileID: 4133739406203169267, guid: cd768d6b13d5e4d45ad47948ffb31204, type: 3}
+  petSpawner: {fileID: 0}
 --- !u!82 &-8784381713492402827
 AudioSource:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d2672437360f7e1408df15394c1ecce8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 37677930c2e6bae41ac06b93e2af573a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
