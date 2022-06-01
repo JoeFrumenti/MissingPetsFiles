@@ -30,7 +30,10 @@ public class Timer : MonoBehaviour
             time = 0;
             timeLeft --;
         }
-        timerText.text = timeLeft.ToString();
+        if(timeLeft >= 0)
+            timerText.text = timeLeft.ToString();
+        else
+            timerText.text = "0";
         if (timeLeft <= 0)
         {
             SceneManager.LoadScene("GameOver");

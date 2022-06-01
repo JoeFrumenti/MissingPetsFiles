@@ -9,6 +9,7 @@ public class MusicStarter : MonoBehaviour
     {
         MusicHandler S = GameObject.Find("Music").GetComponent<MusicHandler>();
         S.playMusic();
+        GameObject.FindWithTag("ScoreKeep").GetComponent<ScoreKeep>().ResetScore();
     }
 
     // Update is called once per frame

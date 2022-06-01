@@ -60,6 +60,7 @@ public class GoodPetClick : MonoBehaviour
                     petSpawner.GetComponent<PetSpawner>().respawn();
                     GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().setTimeRunning(false);
                     GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().addTime(2);
+                    GameObject.FindWithTag("ScoreKeep").GetComponent<ScoreKeep>().AddScore(1);
                 
                 }
             }
