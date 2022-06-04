@@ -15,6 +15,9 @@ TagManager:
   - SideWall
   - PetSpawner
   - Poster
+  - Timer
+  - Music
+  - ScoreKeep
   layers:
   - Default
   - TransparentFX
